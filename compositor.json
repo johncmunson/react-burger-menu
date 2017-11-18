@@ -1,0 +1,147 @@
+{
+  "name": "johncmunson/react-burger-menu",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "",
+  "branch": "",
+  "style": {
+    "name": "Default",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/BannerHeader",
+      "article": "article/BasicArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "-apple-system, BlinkMacSystemFont, sans-serif",
+    "fontWeight": 400,
+    "bold": 600,
+    "lineHeight": 1.5,
+    "typeScale": [
+      72,
+      48,
+      24,
+      20,
+      16,
+      14,
+      12
+    ],
+    "monospace": "Menlo, monospace",
+    "heading": {
+      "fontFamily": null,
+      "fontStyle": null,
+      "fontWeight": 600,
+      "lineHeight": 1.25,
+      "textTransform": null,
+      "letterSpacing": null
+    },
+    "h0": {},
+    "h1": {},
+    "h2": {},
+    "h3": {},
+    "h4": {},
+    "h5": {},
+    "h6": {},
+    "alternativeText": {},
+    "space": [
+      0,
+      8,
+      16,
+      32,
+      48,
+      64,
+      96
+    ],
+    "layout": {
+      "maxWidth": 1024,
+      "centered": false
+    },
+    "colors": {
+      "text": "#111",
+      "background": "#fff",
+      "primary": "#08e",
+      "secondary": "#059",
+      "highlight": "#e08",
+      "border": "#ddd",
+      "muted": "#eee"
+    },
+    "border": {
+      "width": 1,
+      "radius": 2
+    },
+    "link": {},
+    "button": {
+      "hover": {
+        "boxShadow": "inset 0 0 0 999px rgba(0, 0, 0, .125)"
+      }
+    },
+    "input": {},
+    "body": {
+      "margin": 0
+    },
+    "breakpoints": {
+      "xs": "@media screen and (max-width:40em)",
+      "sm": "@media screen and (min-width:40em)",
+      "md": "@media screen and (min-width:52em)",
+      "lg": "@media screen and (min-width:64em)"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "http://negomi.github.io/react-burger-menu/",
+          "text": "Home"
+        },
+        {
+          "href": "https://github.com/johncmunson/react-burger-menu",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://npmjs.com/package/react-burger-menu",
+          "text": "npm"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "react-burger-menu",
+      "subhead": ":hamburger: An off-canvas sidebar component with a collection of effects and styles using CSS transitions and SVG path animations",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "react-burger-menu: :hamburger: An off-canvas sidebar component with a collection of effects and styles using CSS transitions and SVG path animations",
+          "url": "http://negomi.github.io/react-burger-menu/"
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "johncmunson",
+          "repo": "react-burger-menu"
+        }
+      ],
+      "text": "v1.10.9"
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "\n<p>An off-canvas sidebar React component with a collection of effects and styles using CSS transitions and SVG path animations.</p>\n<p><em>Using Redux? Check out <a href=\"https://github.com/negomi/redux-burger-menu\">redux-burger-menu</a> for easy integration of react-burger-menu into your project.</em></p>\n<h2>Demo &amp; examples</h2>\n<p>Live demo: <a href=\"http://negomi.github.io/react-burger-menu/\">negomi.github.io/react-burger-menu</a></p>\n<p>To build the examples locally, run:</p>\n<pre><span class=\"hljs-built_in\">npm</span> install\n<span class=\"hljs-built_in\">npm</span> start</pre><p>Then open <a href=\"http://localhost:8000\"><code>localhost:8000</code></a> in a browser.</p>\n<h2>Tests</h2>\n<p>The test suite uses <a href=\"http://mochajs.org/\">Mocha</a>, <a href=\"http://chaijs.com/\">Chai</a> and <a href=\"http://sinonjs.org/\">Sinon</a>, with <a href=\"https://github.com/tmpvar/jsdom\">jsdom</a>.</p>\n<p><em>You will need at least Node v4.0.0 (or <a href=\"https://iojs.org/en/index.html\">io.js</a>) to run the tests, due to jsdom depending on it.</em></p>\n<p>To run the tests once, run:</p>\n<pre>npm <span class=\"hljs-built_in\">test</span></pre><p>To run them with a watcher, TDD style, run:</p>\n<pre>npm <span class=\"hljs-keyword\">run</span><span class=\"bash\"> tdd</span></pre><h2>Installation</h2>\n<p>The easiest way to use react-burger-menu is to install it from npm and include it in your own React build process (using <a href=\"http://browserify.org\">Browserify</a>, <a href=\"http://webpack.github.io/\">Webpack</a>, etc).</p>\n<p>You can also use the standalone build by including <code>dist/react-burger-menu.js</code> in your page. If you use this, make sure you have already included React, and it is available as a global variable.</p>\n<p>If you&apos;re using React 0.14+:</p>\n<pre>npm <span class=\"hljs-keyword\">install </span>react-<span class=\"hljs-keyword\">burger-menu </span>--save</pre><p>If you&apos;re using React 0.13.3:</p>\n<pre><span class=\"hljs-selector-tag\">npm</span> <span class=\"hljs-selector-tag\">install</span> <span class=\"hljs-selector-tag\">react-burger-menu</span>@<span class=\"hljs-keyword\">1</span>.<span class=\"hljs-keyword\">1</span>.<span class=\"hljs-keyword\">6</span> --save</pre><h2>Usage</h2>\n<p>Items for the sidebar should be passed as child elements of the component using JSX.</p>\n<p><em>If you&apos;re using this component with react-router, or want to include other custom components inside the menu, check out <a href=\"https://github.com/negomi/react-burger-menu/wiki/FAQ#why-doesnt-the-link-component-from-react-router-work\">this</a> and <a href=\"https://github.com/negomi/react-burger-menu/wiki/FAQ#i-want-to-use-custom-components-inside-my-menu-but-this-breaks-firefox\">this</a> in the wiki.</em></p>\n<pre><span class=\"hljs-keyword\">var</span> Menu = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">&apos;react-burger-menu&apos;</span>).nameOfAnimation;\n\n<span class=\"hljs-keyword\">var</span> Example = React.createClass({\n  <span class=\"hljs-attr\">showSettings</span>: <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">event</span>) </span>{\n    event.preventDefault();\n    .\n    .\n    .\n  },\n  <span class=\"hljs-attr\">render</span>: <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\"></span>) </span>{\n    <span class=\"hljs-keyword\">return</span> (\n      <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Menu</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">a</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;home&quot;</span> <span class=\"hljs-attr\">className</span>=<span class=\"hljs-string\">&quot;menu-item&quot;</span> <span class=\"hljs-attr\">href</span>=<span class=\"hljs-string\">&quot;/&quot;</span>&gt;</span>Home<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">a</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">a</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;about&quot;</span> <span class=\"hljs-attr\">className</span>=<span class=\"hljs-string\">&quot;menu-item&quot;</span> <span class=\"hljs-attr\">href</span>=<span class=\"hljs-string\">&quot;/about&quot;</span>&gt;</span>About<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">a</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">a</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;contact&quot;</span> <span class=\"hljs-attr\">className</span>=<span class=\"hljs-string\">&quot;menu-item&quot;</span> <span class=\"hljs-attr\">href</span>=<span class=\"hljs-string\">&quot;/contact&quot;</span>&gt;</span>Contact<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">a</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">a</span> <span class=\"hljs-attr\">onClick</span>=<span class=\"hljs-string\">{</span> <span class=\"hljs-attr\">this.showSettings</span> } <span class=\"hljs-attr\">className</span>=<span class=\"hljs-string\">&quot;menu-item--small&quot;</span> <span class=\"hljs-attr\">href</span>=<span class=\"hljs-string\">&quot;&quot;</span>&gt;</span>Settings<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">a</span>&gt;</span>\n      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">Menu</span>&gt;</span></span>\n    );\n  }\n});</pre><h3>Animations</h3>\n<ul>\n<li><code>slide</code></li>\n<li><code>stack</code></li>\n<li><code>elastic</code></li>\n<li><code>bubble</code></li>\n<li><code>push</code></li>\n<li><code>pushRotate</code></li>\n<li><code>scaleDown</code></li>\n<li><code>scaleRotate</code></li>\n<li><code>fallDown</code></li>\n</ul>\n<h3>Properties</h3>\n<p>Some animations require certain other elements to be on your page:</p>\n<ul>\n<li><p><strong>Page wrapper</strong> - an element wrapping the rest of the content on your page (except elements with fixed positioning - see <a href=\"https://github.com/negomi/react-burger-menu/wiki/FAQ#i-have-a-fixed-header-but-its-scrolling-with-the-rest-of-the-page-when-i-open-the-menu\">the wiki</a> for details), placed after the menu component</p>\n<pre>&lt;Menu pageWrapId={ <span class=\"hljs-string\">&quot;page-wrap&quot;</span> } /&gt;\n<span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">main</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;page-wrap&quot;</span>&gt;</span>\n  .\n  .\n  .\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">main</span>&gt;</span></span></pre></li>\n<li><p><strong>Outer container</strong> - an element containing everything, including the menu component</p>\n<pre>&lt;div id=<span class=\"hljs-string\">&quot;outer-container&quot;</span>&gt;\n  <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Menu</span> <span class=\"hljs-attr\">pageWrapId</span>=<span class=\"hljs-string\">{</span> &quot;<span class=\"hljs-attr\">page-wrap</span>&quot; } <span class=\"hljs-attr\">outerContainerId</span>=<span class=\"hljs-string\">{</span> &quot;<span class=\"hljs-attr\">outer-container</span>&quot; } /&gt;</span>\n  <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">main</span> <span class=\"hljs-attr\">id</span>=<span class=\"hljs-string\">&quot;page-wrap&quot;</span>&gt;</span>\n    .\n    .\n    .\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">main</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span></span></pre></li>\n</ul>\n<p>If you are using an animation that requires either/both of these elements, you need to give the element an ID, and pass that ID to the menu component as the <code>pageWrapId</code> and <code>outerContainerId</code> props respectively.</p>\n<p>Check this table to see which animations require these elements:</p>\n<table>\n<thead>\n<tr>\n<th>Animation</th>\n<th><code>pageWrapId</code></th>\n<th><code>outerContainerId</code></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>slide</code></td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td><code>stack</code></td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td><code>elastic</code></td>\n<td>&#x2713;</td>\n<td>&#x2713;</td>\n</tr>\n<tr>\n<td><code>bubble</code></td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td><code>push</code></td>\n<td>&#x2713;</td>\n<td>&#x2713;</td>\n</tr>\n<tr>\n<td><code>pushRotate</code></td>\n<td>&#x2713;</td>\n<td>&#x2713;</td>\n</tr>\n<tr>\n<td><code>scaleDown</code></td>\n<td>&#x2713;</td>\n<td>&#x2713;</td>\n</tr>\n<tr>\n<td><code>scaleRotate</code></td>\n<td>&#x2713;</td>\n<td>&#x2713;</td>\n</tr>\n<tr>\n<td><code>fallDown</code></td>\n<td>&#x2713;</td>\n<td>&#x2713;</td>\n</tr>\n</tbody>\n</table>\n<h4>Position</h4>\n<p>The menu opens from the left by default. To have it open from the right, use the <code>right</code> prop. It&apos;s just a boolean so you don&apos;t need to specify a value. Then set the position of the button using CSS.</p>\n<pre>&lt;Menu right /&gt;</pre><h4>Width</h4>\n<p>You can specify the width of the menu (in pixels) with the <code>width</code> prop. The default is <code>300</code>.</p>\n<pre>&lt;Menu width={ 280 } /&gt;</pre><h4>Open state</h4>\n<p>You can control whether the sidebar is open or closed with the <code>isOpen</code> prop. This is useful if you need to close the menu after a user clicks on an item in it, for example, or if you want to open the menu from some other button in addition to the standard burger icon. The default value is <code>false</code>.</p>\n<pre><span class=\"hljs-comment\">// To render the menu open</span>\n&lt;Menu isOpen /&gt;\n&lt;Menu isOpen={ true } /&gt;\n\n// To render the menu closed\n&lt;Menu isOpen={ false } /&gt;</pre><p><em>If you want to render the menu open initially, you will need to set this property in your parent component&apos;s <code>componentDidMount()</code> function.</em></p>\n<h4>State change</h4>\n<p>You can detect whether the sidebar is open or closed by passing a callback function to <code>onStateChange</code>. The callback will receive an object containing the new state as its first argument.</p>\n<pre><span class=\"hljs-keyword\">var</span> isMenuOpen = <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">state</span>) </span>{\n  <span class=\"hljs-keyword\">return</span> state.isOpen;\n};\n\n<span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Menu</span> <span class=\"hljs-attr\">onStateChange</span>=<span class=\"hljs-string\">{</span> <span class=\"hljs-attr\">isMenuOpen</span> } /&gt;</span></span></pre><h4>Overlay</h4>\n<p>You can turn off the default overlay with <code>noOverlay</code>.</p>\n<pre>&lt;Menu noOverlay /&gt;</pre><h4>Custom icons</h4>\n<p>You can replace the default bars that make up the burger and cross icons with custom <code>ReactElement</code>s. Pass them as the <code>customBurgerIcon</code> and <code>customCrossIcon</code> props respectively.</p>\n<pre>&lt;Menu customBurgerIcon={ &lt;img src=<span class=\"hljs-string\">&quot;img/icon.svg&quot;</span> /&gt; } /&gt;\n&lt;Menu customCrossIcon={ &lt;img src=&quot;img/cross.svg&quot; /&gt; } /&gt;</pre><p>You should adjust their size using the <code>.bm-burger-button</code> and <code>.bm-cross-button</code> classes, but the element itself will have the class <code>.bm-icon</code> or <code>.bm-cross</code> if you need to access it directly.</p>\n<p>You can also disable the icon elements so they won&apos;t be included at all, by passing <code>false</code> to these props.</p>\n<pre>&lt;Menu customBurgerIcon={ <span class=\"hljs-literal\">false</span> } /&gt;\n<span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Menu</span> <span class=\"hljs-attr\">customCrossIcon</span>=<span class=\"hljs-string\">{</span> <span class=\"hljs-attr\">false</span> } /&gt;</span></span></pre><p>This can be useful if you want exclusive external control of the menu, using the <code>isOpen</code> prop.</p>\n<h4>Custom ID</h4>\n<p>There is also an optional <code>id</code> prop, which will simply add an ID to the rendered menu&apos;s outermost element. This is not required for any functionality.</p>\n<pre>&lt;Menu id={ <span class=\"hljs-string\">&quot;sidebar&quot;</span> } /&gt;</pre><h3>Styling</h3>\n<p>All the animations are handled internally by the component. However, the visual styles (colors, fonts etc.) are not, and need to be supplied, either with CSS or with a JavaScript object passed as the <code>styles</code> prop.</p>\n<h4>CSS</h4>\n<p>The component has the following helper classes:</p>\n<pre><span class=\"hljs-comment\">/* Position and sizing of burger button */</span>\n<span class=\"hljs-selector-class\">.bm-burger-button</span> {\n  <span class=\"hljs-attribute\">position</span>: fixed;\n  <span class=\"hljs-attribute\">width</span>: <span class=\"hljs-number\">36px</span>;\n  <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-number\">30px</span>;\n  <span class=\"hljs-attribute\">left</span>: <span class=\"hljs-number\">36px</span>;\n  <span class=\"hljs-attribute\">top</span>: <span class=\"hljs-number\">36px</span>;\n}\n\n<span class=\"hljs-comment\">/* Color/shape of burger icon bars */</span>\n<span class=\"hljs-selector-class\">.bm-burger-bars</span> {\n  <span class=\"hljs-attribute\">background</span>: <span class=\"hljs-number\">#373a47</span>;\n}\n\n<span class=\"hljs-comment\">/* Position and sizing of clickable cross button */</span>\n<span class=\"hljs-selector-class\">.bm-cross-button</span> {\n  <span class=\"hljs-attribute\">height</span>: <span class=\"hljs-number\">24px</span>;\n  <span class=\"hljs-attribute\">width</span>: <span class=\"hljs-number\">24px</span>;\n}\n\n<span class=\"hljs-comment\">/* Color/shape of close button cross */</span>\n<span class=\"hljs-selector-class\">.bm-cross</span> {\n  <span class=\"hljs-attribute\">background</span>: <span class=\"hljs-number\">#bdc3c7</span>;\n}\n\n<span class=\"hljs-comment\">/* General sidebar styles */</span>\n<span class=\"hljs-selector-class\">.bm-menu</span> {\n  <span class=\"hljs-attribute\">background</span>: <span class=\"hljs-number\">#373a47</span>;\n  <span class=\"hljs-attribute\">padding</span>: <span class=\"hljs-number\">2.5em</span> <span class=\"hljs-number\">1.5em</span> <span class=\"hljs-number\">0</span>;\n  <span class=\"hljs-attribute\">font-size</span>: <span class=\"hljs-number\">1.15em</span>;\n}\n\n<span class=\"hljs-comment\">/* Morph shape necessary with bubble or elastic */</span>\n<span class=\"hljs-selector-class\">.bm-morph-shape</span> {\n  <span class=\"hljs-attribute\">fill</span>: <span class=\"hljs-number\">#373a47</span>;\n}\n\n<span class=\"hljs-comment\">/* Wrapper for item list */</span>\n<span class=\"hljs-selector-class\">.bm-item-list</span> {\n  <span class=\"hljs-attribute\">color</span>: <span class=\"hljs-number\">#b8b7ad</span>;\n  <span class=\"hljs-attribute\">padding</span>: <span class=\"hljs-number\">0.8em</span>;\n}\n\n<span class=\"hljs-comment\">/* Styling of overlay */</span>\n<span class=\"hljs-selector-class\">.bm-overlay</span> {\n  <span class=\"hljs-attribute\">background</span>: <span class=\"hljs-built_in\">rgba</span>(0, 0, 0, 0.3);\n}</pre><h4>JavaScript</h4>\n<p>The same styles can be written as a JavaScript object like this:</p>\n<pre><span class=\"hljs-keyword\">var</span> styles = {\n  <span class=\"hljs-attr\">bmBurgerButton</span>: {\n    <span class=\"hljs-attr\">position</span>: <span class=\"hljs-string\">&apos;fixed&apos;</span>,\n    <span class=\"hljs-attr\">width</span>: <span class=\"hljs-string\">&apos;36px&apos;</span>,\n    <span class=\"hljs-attr\">height</span>: <span class=\"hljs-string\">&apos;30px&apos;</span>,\n    <span class=\"hljs-attr\">left</span>: <span class=\"hljs-string\">&apos;36px&apos;</span>,\n    <span class=\"hljs-attr\">top</span>: <span class=\"hljs-string\">&apos;36px&apos;</span>\n  },\n  <span class=\"hljs-attr\">bmBurgerBars</span>: {\n    <span class=\"hljs-attr\">background</span>: <span class=\"hljs-string\">&apos;#373a47&apos;</span>\n  },\n  <span class=\"hljs-attr\">bmCrossButton</span>: {\n    <span class=\"hljs-attr\">height</span>: <span class=\"hljs-string\">&apos;24px&apos;</span>,\n    <span class=\"hljs-attr\">width</span>: <span class=\"hljs-string\">&apos;24px&apos;</span>\n  },\n  <span class=\"hljs-attr\">bmCross</span>: {\n    <span class=\"hljs-attr\">background</span>: <span class=\"hljs-string\">&apos;#bdc3c7&apos;</span>\n  },\n  <span class=\"hljs-attr\">bmMenu</span>: {\n    <span class=\"hljs-attr\">background</span>: <span class=\"hljs-string\">&apos;#373a47&apos;</span>,\n    <span class=\"hljs-attr\">padding</span>: <span class=\"hljs-string\">&apos;2.5em 1.5em 0&apos;</span>,\n    <span class=\"hljs-attr\">fontSize</span>: <span class=\"hljs-string\">&apos;1.15em&apos;</span>\n  },\n  <span class=\"hljs-attr\">bmMorphShape</span>: {\n    <span class=\"hljs-attr\">fill</span>: <span class=\"hljs-string\">&apos;#373a47&apos;</span>\n  },\n  <span class=\"hljs-attr\">bmItemList</span>: {\n    <span class=\"hljs-attr\">color</span>: <span class=\"hljs-string\">&apos;#b8b7ad&apos;</span>,\n    <span class=\"hljs-attr\">padding</span>: <span class=\"hljs-string\">&apos;0.8em&apos;</span>\n  },\n  <span class=\"hljs-attr\">bmOverlay</span>: {\n    <span class=\"hljs-attr\">background</span>: <span class=\"hljs-string\">&apos;rgba(0, 0, 0, 0.3)&apos;</span>\n  }\n}\n\n&lt;Menu styles={ styles } /&gt;</pre><h3>Server-side rendering</h3>\n<p>This component uses <a href=\"https://github.com/FormidableLabs/radium\">Radium</a> to manage its internal styles, which also handles vendor prefixing. In universal/isomorphic applications, you need to pass the user agent to the component via the <a href=\"https://github.com/FormidableLabs/radium/tree/master/docs/api#configuseragent\"><code>radiumConfig</code></a> prop so Radium knows which prefixes to apply.</p>\n<p>This is an example of how that would look using Express:</p>\n<pre>&lt;Menu radiumConfig={{ <span class=\"hljs-attr\">userAgent</span>: req.headers[<span class=\"hljs-string\">&apos;user-agent&apos;</span>] }} /&gt;</pre><p>If you&apos;re not terribly concerned with memory/data usage and for some reason can&apos;t provide the user agent (for example, your application sits behind a CDN or other proxy), you can specify the user agent <code>&apos;all&apos;</code> to use all vendor prefixes.</p>\n<pre>&lt;Menu radiumConfig={{ <span class=\"hljs-attr\">userAgent</span>: <span class=\"hljs-string\">&apos;all&apos;</span> }} /&gt;</pre><h3>Browser support</h3>\n<p>Because this project uses CSS3 features, it&apos;s only meant for modern browsers. Some browsers currently fail to apply some of the animations correctly.</p>\n<p>Chrome and Firefox have full support, but Safari and IE have strange behavior for some of the menus.</p>\n<h3>Help</h3>\n<p>Check the FAQ (<a href=\"https://github.com/negomi/react-burger-menu/wiki/FAQ\">https://github.com/negomi/react-burger-menu/wiki/FAQ</a>) to see if your question has been answered already, or <a href=\"https://github.com/negomi/react-burger-menu/issues\">open a new issue</a>.</p>\n<h3>License</h3>\n<p>MIT</p>\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/johncmunson/react-burger-menu",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/johncmunson",
+          "text": "johncmunson"
+        }
+      ]
+    }
+  ]
+}
